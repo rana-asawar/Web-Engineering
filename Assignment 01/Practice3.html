@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>My Profile</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10px;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2980b9;
+      }
+
+      a:hover {
+        color: #3498db;
+      }
+
+      .nav {
+        background-color: #3498db;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: larger;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .nav li {
+        margin-right: 20px;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .nav a:hover {
+        color: #ecf0f1;
+      }
+
+      .hero {
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 24px;
+      }
+
+      .about {
+        padding: 40px;
+        background-color: #ecf0f1;
+        text-align: center;
+      }
+      .about ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .about li {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .profile-img {
+        width: 280px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 20px auto;
+        display: block;
+      }
+      .skills {
+        padding: 40px;
+        background-color: #fff;
+        text-align: center;
+      }
+      .skills span {
+        font-size: 20px;
+        color: #333;
+        font-weight: bolder;
+      }
+
+      .skills ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .skills li {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .certificate {
+        padding: 40px;
+        text-align: center;
+      }
+      .certificate li {
+        list-style: none;
+      }
+      .certificate img {
+        width: 800px;
+        height: 500px;
+      }
+      .certificate span {
+        font-family: cursive;
+        font-weight: lighter;
+      }
+
+      .projects {
+        padding: 40px;
+        background-color: #ecf0f1;
+        text-align: center;
+      }
+
+      .projects ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .projects li {
+        margin-bottom: 20px;
+      }
+
+      .projects img {
+        float: right;
+        width: 500px;
+        height: 250px;
+        border-radius: 10px;
+      }
+
+      .contact {
+        padding: 40px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .contact a {
+        color: #2980b9;
+      }
+
+      .contact a:hover {
+        color: #3498db;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #3498db;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+      }
+      @media (max-width: 480px) {
+        .nav {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: smaller;
+        }
+        .nav ul {
+          flex-direction: column;
+        }
+        .nav li {
+          margin-right: 0;
+        }
+
+        .hero {
+          padding: 10px;
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .hero p {
+          font-size: 18px;
+        }
+
+        .about {
+          padding: 20px;
+        }
+        .profile-img {
+          width: 200px;
+          height: 220px;
+        }
+
+        .skills {
+          padding: 20px;
+        }
+        .skills ul {
+          column-count: 2;
+        }
+
+        .certificate {
+          padding: 20px;
+        }
+        .certificate img {
+          width: 400px;
+          height: 250px;
+        }
+
+        .projects {
+          padding: 20px;
+        }
+        .projects ul {
+          column-count: 1;
+        }
+        .projects img {
+          width: 300px;
+          height: 150px;
+        }
+
+        .contact {
+          padding: 20px;
+        }
+
+        footer {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificate">Certificates</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h1>Welcome to my Profile</h1>
+      <p>A Computer Science student with a passion for innovation</p>
+    </header>
+
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <img src="profile2.jpg" alt="My Photo" class="profile-img" />
+      <p>
+        I am a Computer Science student at
+        <a href="https://www.iba-suk.edu.pk/" target="_blank"
+          >Sukkur IBA University</a
+        >. I have a strong foundation in Java, Python, and C++, with practical
+        experience in web development, database management. I am eager to
+        contribute to innovative projects and grow professionally in the field
+        of computer science.
+      </p>
+      <h2>Education</h2>
+      <ul>
+        <li>BS Computer Science, Sukkur IBA, Present</li>
+        <li>Intermediate, APSACS, 2021</li>
+      </ul>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li><span>Programming Languages:</span>Python, Java, C++, SQL</li>
+        <li><span>Web Development:</span>HTML, CSS, JavaScript</li>
+        <li><span>Database Management:</span>MySQL</li>
+        <li><span>Data Structures and Algorithm</span></li>
+      </ul>
+    </section>
+
+    <section class="certificate" id="certificate">
+      <h2>Certificates</h2>
+      <ul>
+        <li>
+          <h3>Python Fundamentals<span>- Coddy.tech</span></h3>
+          <img src="Certificate.png" alt="" />
+        </li>
+      </ul>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>My Projects</h2>
+      <ul>
+        <li>
+          <img src="D:\LMS.png" alt="Project 1" />
+          <h3>Library Management System</h3>
+          <p>
+            A Library Management System using Object-Oriented Programming (OOP)
+            is a software project designed to manage and organize a library's
+            resources efficiently. This system includes features for adding,
+            updating, and deleting books, as well as managing user accounts and
+            tracking book loans and returns. By leveraging OOP principles, the
+            system ensures modularity, reusability, and maintainability of code,
+            facilitating easier updates and scalability. The project
+            demonstrates practical implementation of OOP concepts such as
+            classes, inheritance, polymorphism, and encapsulation, providing a
+            robust solution for library management.
+          </p>
+        </li>
+        <li>
+          <img src="Airline.png" alt="Project 2" />
+          <h3>Airline Reservation System(Using Arrays and Linkedlist)</h3>
+          <p>
+            This project is a simplified Airline Reservation System that uses
+            fundamental data structures like arrays and linked lists to manage
+            flight bookings, cancellations, and passenger details. Arrays are
+            used to store flight information such as available seats and
+            schedules, ensuring efficient access and updates. Linked lists
+            manage the passenger data, allowing dynamic addition, deletion, and
+            retrieval of booking records. The system provides basic
+            functionalities like seat reservation, cancellation, and flight
+            status updates, emphasizing efficient memory usage and data
+            manipulation through structured data handling.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in Touch</h2>
+      <p>
+        Email: <a href="mailto:ranaassawar@gmail.com">ranaassawar@gmail.com</a>
+      </p>
+      <p>
+        WhatsApp:
+        <a href="https://wa.me/+9234567890" target="_blank"
+          >Message me on WhatsApp</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2021</p>
+    </footer>
+  </body>
+</html>
